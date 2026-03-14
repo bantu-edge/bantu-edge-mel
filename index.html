@@ -6,30 +6,12 @@
 <title>MEL Framework — Bantu-Edge</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--g:#1a3a2a;--gm:#2a5a3f;--gl:#3d7a57;--gold:#c8a84b;--gold2:#e8c96b;--cream:#fdfbf7;--warm:#f0ece4;--text:#1a1a18;--muted:#6a6a60;--white:#ffffff;--red:#c0392b;--blue:#2980b9;--teal:#1a7a6e;}
+:root{--g:#1a3a2a;--gm:#2a5a3f;--gl:#3d7a57;--gold:#c8a84b;--gold2:#e8c96b;--cream:#fcfbf7;--warm:#f0ece4;--text:#1a1a18;--muted:#6a6a60;--white:#ffffff;--red:#c0392b;--blue:#2980b9;--teal:#1a7a6e;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+body{font-family:'DM Sans',sans-serif;background:#fcfbf7;color:var(--text);overflow-x:hidden;}
 
-
-
-/* ── HERO — generative art background ── */
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding:80px 80px 80px;}
-#hero-canvas{position:absolute;inset:0;width:100%;height:100%;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,42,30,0.82) 0%,rgba(26,58,42,0.55) 55%,rgba(18,36,26,0.78) 100%);}
-.hero-content{position:relative;z-index:2;max-width:760px;}
-.hero-pre{font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:.25em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
-.hero-pre::before{content:'';width:28px;height:1px;background:var(--gold);opacity:.6;}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(44px,6vw,84px);font-weight:900;color:var(--white);line-height:.95;margin-bottom:12px;}
-.hero-h1 .gold{color:var(--gold);}
-.hero-h1 .italic{font-style:italic;}
-.hero-sub{font-family:'Playfair Display',serif;font-size:clamp(16px,2vw,24px);color:rgba(255,255,255,0.45);font-style:italic;margin-bottom:28px;}
-.hero-desc{font-size:15px;color:rgba(255,255,255,0.62);line-height:1.8;max-width:540px;margin-bottom:44px;font-weight:300;}
-.hero-cta{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;background:var(--gold);color:var(--g);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .25s;}
-.hero-cta:hover{background:var(--gold2);transform:translateY(-2px);}
-.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.25);font-size:9px;letter-spacing:.18em;text-transform:uppercase;}
-.scroll-bar{width:1px;height:52px;background:linear-gradient(to bottom,rgba(200,168,75,.6),transparent);animation:spulse 2s ease-in-out infinite;}
-@keyframes spulse{0%,100%{opacity:.3}50%{opacity:1}}
+50%{opacity:1}}
 
 /* ── SECTION BASE ── */
 section{padding:96px 80px;}
@@ -39,7 +21,7 @@ section{padding:96px 80px;}
 .sec-intro{font-size:15px;color:var(--muted);line-height:1.8;max-width:640px;margin-bottom:56px;font-weight:300;}
 
 /* ── WHAT'S MISSING CALLOUT ── */
-#missing{background:var(--white);padding:96px 80px;}
+#missing{background:#fcfbf7;padding:96px 80px;}
 .missing-list{display:flex;flex-direction:column;max-width:820px;gap:0;}
 .missing-item{display:flex;align-items:center;gap:20px;padding:18px 24px 18px 20px;border-radius:8px;margin-bottom:6px;transition:transform .2s;}
 .missing-item:hover{transform:translateX(4px);}
@@ -76,9 +58,9 @@ section{padding:96px 80px;}
 .missing-item:nth-child(6) .mi-text{color:rgba(26,58,42,0.65);}
 
 /* ── THE DIAGRAM ── */
-#diagram{background:var(--cream);padding:96px 80px;}
+#diagram{background:#fcfbf7;padding:96px 80px;}
 .diagram-intro{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start;margin-bottom:64px;}
-.diagram-legend{background:var(--white);border:0.5px solid rgba(26,58,42,.1);border-radius:4px;padding:20px;}
+.diagram-legend{background:#fcfbf7;border:0.5px solid rgba(26,58,42,.1);border-radius:4px;padding:20px;}
 .legend-title{font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
 .legend-item{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:12px;color:var(--text);}
 .legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
@@ -98,20 +80,20 @@ section{padding:96px 80px;}
 @keyframes nodepulse{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* Info panel */
-.info-panel{display:none;background:var(--white);border:0.5px solid rgba(26,58,42,.12);border-radius:4px;padding:28px 28px 24px;margin-top:20px;position:relative;}
+.info-panel{display:none;background:#fcfbf7;border:0.5px solid rgba(26,58,42,.12);border-radius:4px;padding:28px 28px 24px;margin-top:20px;position:relative;}
 .info-panel.show{display:block;}
-.ip-close{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:var(--warm);border:none;cursor:pointer;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+.ip-close{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:#fcfbf7;border:none;cursor:pointer;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
 .ip-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
 .ip-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--g);margin-bottom:10px;}
 .ip-body{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px;}
 .ip-connections{display:flex;flex-wrap:wrap;gap:6px;}
-.ip-chip{padding:4px 12px;background:var(--warm);border-radius:100px;font-size:11px;color:var(--g);cursor:pointer;transition:all .2s;border:1px solid transparent;}
-.ip-chip:hover{border-color:var(--g);background:var(--white);}
+.ip-chip{padding:4px 12px;background:#fcfbf7;border-radius:100px;font-size:11px;color:var(--g);cursor:pointer;transition:all .2s;border:1px solid transparent;}
+.ip-chip:hover{border-color:var(--g);background:#fcfbf7;}
 .ip-hint{font-size:11px;color:var(--muted);margin-top:12px;font-style:italic;}
 
 /* ── FRAMEWORK STEPS (interactive) ── */
-#framework{background:var(--warm);}
-.steps-container{display:grid;grid-template-columns:280px 1fr;gap:0;border:0.5px solid rgba(26,58,42,.1);border-radius:4px;overflow:hidden;background:var(--white);}
+#framework{background:#fcfbf7;}
+.steps-container{display:grid;grid-template-columns:280px 1fr;gap:0;border:0.5px solid rgba(26,58,42,.1);border-radius:4px;overflow:hidden;background:#fcfbf7;}
 .steps-nav{background:var(--g);padding:0;}
 .step-navitem{padding:18px 20px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:12px;transition:all .2s;}
 .step-navitem:last-child{border-bottom:none;}
@@ -123,7 +105,7 @@ section{padding:96px 80px;}
 .step-navitem.active .sn-label{color:var(--white);}
 .step-content{padding:36px 32px;display:none;}
 .step-content.active{display:block;}
-.sc-icon{width:48px;height:48px;border-radius:8px;background:var(--warm);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px;}
+.sc-icon{width:48px;height:48px;border-radius:8px;background:#fcfbf7;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px;}
 .sc-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
 .sc-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--g);margin-bottom:12px;}
 .sc-body{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:20px;}
@@ -132,7 +114,7 @@ section{padding:96px 80px;}
 .deliv-arrow{color:var(--gold);flex-shrink:0;margin-top:1px;}
 
 /* ── TENSIONS SECTION ── */
-#tensions{background:var(--g);}
+#tensions{background:#fcfbf7;}
 #tensions .sec-title{color:var(--white);}
 #tensions .sec-intro{color:rgba(255,255,255,.5);}
 #tensions .sec-label{color:var(--gold);}
@@ -154,13 +136,13 @@ section{padding:96px 80px;}
 .tc-res-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
 
 /* ── BELIEFS ── */
-#beliefs{background:var(--cream);}
+#beliefs{background:#fcfbf7;}
 .beliefs-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
 .btab{padding:9px 18px;font-size:12px;border-radius:100px;border:1px solid rgba(26,58,42,.18);background:transparent;color:var(--muted);cursor:pointer;transition:all .22s;font-family:'DM Sans',sans-serif;}
 .btab:hover{border-color:var(--g);color:var(--g);}
 .btab.active{background:var(--g);color:var(--white);border-color:var(--g);}
 .belief-display{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.bd-main{background:var(--white);border:0.5px solid rgba(26,58,42,.08);border-radius:4px;padding:28px;opacity:0;transform:translateY(6px);transition:all .3s;}
+.bd-main{background:#fcfbf7;border:0.5px solid rgba(26,58,42,.08);border-radius:4px;padding:28px;opacity:0;transform:translateY(6px);transition:all .3s;}
 .bd-main.in{opacity:1;transform:translateY(0);}
 .bd-tension{background:var(--g);border-radius:4px;padding:28px;opacity:0;transform:translateY(6px);transition:all .35s;}
 .bd-tension.in{opacity:1;transform:translateY(0);}
@@ -169,30 +151,29 @@ section{padding:96px 80px;}
 .bd-tension .bd-title{color:var(--white);}
 .bd-text{font-size:13px;color:var(--muted);line-height:1.8;}
 .bd-tension .bd-text{color:rgba(255,255,255,.55);}
-.bd-challenge{margin-top:14px;padding:12px 14px;background:var(--warm);border-radius:4px;font-size:12px;color:var(--muted);border-left:2px solid rgba(200,168,75,.4);line-height:1.7;}
+.bd-challenge{margin-top:14px;padding:12px 14px;background:#fcfbf7;border-radius:4px;font-size:12px;color:var(--muted);border-left:2px solid rgba(200,168,75,.4);line-height:1.7;}
 .bd-tension .bd-challenge{background:rgba(255,255,255,.06);border-left-color:var(--gold);color:rgba(255,255,255,.45);}
 
 /* ── QUOTE ── */
-.quote-section{padding:80px;background:var(--g);text-align:center;}
+.quote-section{padding:48px 80px 64px;background:#fcfbf7;text-align:center;}
+.quote-inner{background:var(--g);border-radius:12px;padding:56px 64px;max-width:860px;margin:0 auto;}
 .quote-mark{font-family:'Playfair Display',serif;font-size:80px;color:rgba(200,168,75,.15);line-height:.5;margin-bottom:16px;}
-.quote-text{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,30px);font-style:italic;color:var(--white);max-width:700px;margin:0 auto 20px;line-height:1.5;font-weight:400;}
-.quote-attr{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;}
+.quote-text{font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,26px);font-style:italic;color:var(--white);max-width:680px;margin:0 auto 20px;line-height:1.6;font-weight:400;}
+.quote-attr{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;}
 
 /* ── CTA ── */
-.cta-sec{padding:80px;background:var(--warm);text-align:center;}
+.cta-sec{padding:80px;background:#fcfbf7;text-align:center;}
 .cta-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,40px);font-weight:700;color:var(--g);margin-bottom:12px;}
 .cta-text{font-size:15px;color:var(--muted);max-width:480px;margin:0 auto 32px;line-height:1.75;}
 .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--g);color:var(--white);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .25s;}
 .cta-btn:hover{background:var(--gm);transform:translateY(-2px);}
-
-
 
 /* ── ANIMATIONS ── */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
 @media(max-width:900px){
   nav{padding:0 20px;} .nav-links{display:none;}
-  .hero{padding:100px 24px 60px;} section{padding:60px 24px;}
+  section{padding:60px 24px;}
   .diagram-intro{grid-template-columns:1fr;}
   .steps-container{grid-template-columns:1fr;}
   .steps-nav{display:flex;overflow-x:auto;padding:0;}
@@ -207,26 +188,6 @@ section{padding:96px 80px;}
 </head>
 <body>
 
-
-<!-- HERO — animated generative canvas -->
-<div class="hero">
-  <canvas id="hero-canvas"></canvas>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-pre">Bantu-Edge · Thought Leadership</div>
-    <h1 class="hero-h1">
-      Evidence<br>
-      that <span class="gold italic">travels.</span>
-    </h1>
-    <p class="hero-sub">A MEL philosophy for Southern Africa</p>
-    <p class="hero-desc">Most MEL systems answer one question: did we do what we said we would? We design systems that hold accountability and learning together — treating community knowledge as data, context as terrain, and discomfort as information.</p>
-    <a href="#diagram" class="hero-cta">Explore the framework ↓</a>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-bar"></div>
-    Scroll
-  </div>
-</div>
 
 <!-- WHAT'S MISSING IN STANDARD MEL -->
 <section id="missing">
@@ -514,11 +475,13 @@ section{padding:96px 80px;}
 </section>
 
 <!-- TENSIONS -->
-<section id="tensions">
-  <div class="sec-label">Productive contradictions</div>
-  <h2 class="sec-title">The tensions we hold<br>deliberately</h2>
-  <p class="sec-intro">We do not resolve these tensions prematurely. We design MEL systems that can navigate them. Click any tension to see how.</p>
-  <div class="tensions-grid" id="tensions-grid"></div>
+<section id="tensions" style="background:#fcfbf7;">
+  <div style="background:var(--g);border-radius:12px;padding:56px 48px;">
+    <div class="sec-label" style="color:var(--gold2);">Productive contradictions</div>
+    <h2 class="sec-title" style="color:var(--white);">The tensions we hold<br>deliberately</h2>
+    <p class="sec-intro" style="color:rgba(255,255,255,.5);">We do not resolve these tensions prematurely. We design MEL systems that can navigate them. Click any tension to see how.</p>
+    <div class="tensions-grid" id="tensions-grid"></div>
+  </div>
 </section>
 
 <!-- BELIEFS -->
@@ -532,9 +495,11 @@ section{padding:96px 80px;}
 
 <!-- QUOTE -->
 <div class="quote-section">
-  <div class="quote-mark">"</div>
-  <p class="quote-text">MEL done well is itself a form of accountability to the communities at the centre of the work — not just to the institutions funding it.</p>
-  <div class="quote-attr">Bantu-Edge · MEL Philosophy</div>
+  <div class="quote-inner">
+    <div class="quote-mark">"</div>
+    <p class="quote-text">MEL done well is itself a form of accountability to the communities at the centre of the work — not just to the institutions funding it.</p>
+    <div class="quote-attr">Bantu-Edge · MEL Philosophy</div>
+  </div>
 </div>
 
 <!-- CTA -->
@@ -545,282 +510,10 @@ section{padding:96px 80px;}
   <div style="margin-top:20px;font-size:12px;color:var(--muted);">info@bantu-edge.com &nbsp;·&nbsp; www.bantu-edge.com</div>
 </div>
 
-
-
 <script>
-/* ── HERO CANVAS — DRAMATIC MEL UNIVERSE ── */
-const canvas = document.getElementById('hero-canvas');
-const ctx = canvas.getContext('2d');
-let W, H, T = 0;
-let nodes = [], links = [], flows = [], explosions = [], waveRings = [];
-let mouseX = -999, mouseY = -999;
 
-const G = 200, W2 = 180, G2 = 220; // gold, white, greenish
 
-function rand(min, max) { return min + Math.random() * (max - min); }
-
-function resizeCanvas() {
-  W = canvas.width = canvas.offsetWidth;
-  H = canvas.height = canvas.offsetHeight;
-  build();
-}
-
-function build() {
-  // Named anchor nodes — large, labelled, dramatic
-  const anchors = [
-    { x: W*.15, y: H*.20, r: 22, type:'gold',  label:'Theory\nof change', phase:0 },
-    { x: W*.50, y: H*.30, r: 32, type:'gold',  label:'MEL\nSystem',      phase:1.1 },
-    { x: W*.82, y: H*.22, r: 20, type:'gold',  label:'Community\nVoice', phase:2.3 },
-    { x: W*.25, y: H*.62, r: 18, type:'white', label:'Context',          phase:0.6 },
-    { x: W*.72, y: H*.58, r: 18, type:'white', label:'Evidence',         phase:1.9 },
-    { x: W*.50, y: H*.82, r: 20, type:'gold',  label:'Learning',         phase:3.1 },
-    { x: W*.88, y: H*.72, r: 14, type:'white', label:'Action',           phase:2.7 },
-    { x: W*.08, y: H*.58, r: 14, type:'white', label:'GESI',             phase:0.3 },
-  ];
-
-  // Satellite mini-nodes
-  const satellites = [];
-  for(let i = 0; i < 18; i++) {
-    satellites.push({
-      x: rand(W*.05, W*.95), y: rand(H*.08, H*.95),
-      r: rand(4, 9), type: Math.random()>.5 ? 'gold' : 'white',
-      label:'', phase: rand(0, 6.28)
-    });
-  }
-
-  nodes = [...anchors, ...satellites];
-
-  // Links between anchors — thick, dramatic
-  links = [
-    [0,1,'gold',2.5], [1,2,'gold',2.5], [1,3,'white',1.5], [1,4,'white',1.5],
-    [1,5,'gold',2.5], [2,4,'white',1.2], [3,7,'white',1.2], [4,6,'white',1.2],
-    [5,6,'gold',1.5], [5,7,'gold',1.5], [0,3,'white',1], [3,5,'white',1],
-    [0,7,'white',1], [2,6,'white',1],
-  ];
-
-  // Data flows — fast travelling sparks
-  flows = [];
-  links.forEach(([a, b, col]) => {
-    for(let k = 0; k < 4; k++) {
-      flows.push({
-        a, b, col,
-        t: rand(0, 1),
-        speed: rand(0.003, 0.008),
-        rev: Math.random() > 0.6,
-        size: rand(2.5, 5.5),
-        bright: Math.random() > 0.7,
-        trailLen: 8,
-        history: []
-      });
-    }
-  });
-}
-
-// Spawn a shockwave explosion at a node
-function explode(node) {
-  explosions.push({
-    x: node.x, y: node.y,
-    rings: [
-      { r: node.r, maxR: node.r * 8,  alpha: 0.9, speed: 3.5, width: 2.5, col:'gold' },
-      { r: node.r, maxR: node.r * 14, alpha: 0.5, speed: 2.2, width: 1.5, col:'gold' },
-      { r: node.r, maxR: node.r * 20, alpha: 0.25, speed: 1.4, width: 0.8, col:'white' },
-    ]
-  });
-}
-
-// Spawn wave rings periodically
-let lastExplode = 0;
-function maybeExplode() {
-  if(T - lastExplode > 2.8) {
-    const big = nodes.slice(0,8);
-    explode(big[Math.floor(Math.random() * big.length)]);
-    lastExplode = T;
-  }
-}
-
-function bezierPt(a, b, p) {
-  // Slightly curved path between two points
-  const cp = {
-    x: (a.x + b.x)/2 + (b.y - a.y) * 0.22,
-    y: (a.y + b.y)/2 - (b.x - a.x) * 0.22
-  };
-  const q = 1 - p;
-  return {
-    x: q*q*a.x + 2*q*p*cp.x + p*p*b.x,
-    y: q*q*a.y + 2*q*p*cp.y + p*p*b.y
-  };
-}
-
-function drawScene() {
-  // Soft trail — don't fully clear
-  ctx.fillStyle = 'rgba(22,45,32,0.18)';
-  ctx.fillRect(0, 0, W, H);
-
-  T += 0.016;
-  maybeExplode();
-
-  // Mouse influence — nodes near mouse pull toward it slightly
-  const MOUSE_RADIUS = 180;
-
-  // ── 1. LINK LINES — bold, glowing ──
-  links.forEach(([ai, bi, col, lw]) => {
-    const a = nodes[ai], b = nodes[bi];
-    if(!a || !b) return;
-    const pulse = 0.18 + 0.12 * Math.sin(T * 1.2 + a.phase + b.phase);
-    const cp = {
-      x: (a.x + b.x)/2 + (b.y - a.y) * 0.22,
-      y: (a.y + b.y)/2 - (b.x - a.x) * 0.22
-    };
-    ctx.beginPath();
-    ctx.moveTo(a.x, a.y);
-    ctx.quadraticCurveTo(cp.x, cp.y, b.x, b.y);
-    const c = col === 'gold' ? `rgba(200,168,75,${pulse})` : `rgba(255,255,255,${pulse * 0.55})`;
-    ctx.strokeStyle = c;
-    ctx.lineWidth = lw || 1.2;
-    ctx.stroke();
-  });
-
-  // ── 2. DATA FLOW SPARKS — dramatic trails ──
-  flows.forEach(flow => {
-    const a = nodes[flow.a], b = nodes[flow.b];
-    if(!a || !b) return;
-
-    flow.t += flow.speed * (flow.rev ? -1 : 1);
-    if(flow.t > 1) flow.t = 0;
-    if(flow.t < 0) flow.t = 1;
-
-    const pt = bezierPt(a, b, flow.t);
-
-    // Store trail
-    flow.history.unshift({ x: pt.x, y: pt.y });
-    if(flow.history.length > flow.trailLen) flow.history.pop();
-
-    const edgeFade = Math.min(flow.t * 6, (1 - flow.t) * 6, 1);
-
-    // Draw trail
-    flow.history.forEach((h, idx) => {
-      const trailAlpha = edgeFade * (1 - idx / flow.trailLen) * (flow.bright ? 0.85 : 0.45);
-      const trailR = flow.size * (1 - idx / flow.trailLen * 0.7);
-      ctx.beginPath();
-      ctx.arc(h.x, h.y, Math.max(trailR, 0.5), 0, Math.PI * 2);
-      if(flow.col === 'gold') {
-        ctx.fillStyle = `rgba(200,168,75,${trailAlpha})`;
-      } else {
-        ctx.fillStyle = `rgba(255,255,255,${trailAlpha * 0.7})`;
-      }
-      ctx.fill();
-    });
-
-    // Head spark — brightest
-    if(flow.bright) {
-      ctx.beginPath();
-      ctx.arc(pt.x, pt.y, flow.size * 1.6, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,220,100,${edgeFade * 0.95})`;
-      ctx.fill();
-    }
-  });
-
-  // ── 3. HUB NODES — large, dramatic, pulsing ──
-  nodes.forEach((n, i) => {
-    const breathe = Math.sin(T * 0.7 + n.phase);
-    const scale = 1 + breathe * 0.25;
-    const r = n.r * scale;
-    const isGold = n.type === 'gold';
-
-    // Mouse proximity boost
-    const dx = mouseX - n.x, dy = mouseY - n.y;
-    const dist = Math.sqrt(dx*dx + dy*dy);
-    const mouseFactor = dist < MOUSE_RADIUS ? 1 + (1 - dist/MOUSE_RADIUS) * 1.8 : 1;
-
-    // Outer halo — large, dramatic
-    const haloAlpha = (0.06 + breathe * 0.04) * mouseFactor;
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, r * 4.5 * mouseFactor, 0, Math.PI * 2);
-    ctx.fillStyle = isGold ? `rgba(200,168,75,${haloAlpha * 0.5})` : `rgba(255,255,255,${haloAlpha * 0.3})`;
-    ctx.fill();
-
-    // Mid ring
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, r * 2.5 * mouseFactor, 0, Math.PI * 2);
-    ctx.fillStyle = isGold ? `rgba(200,168,75,${haloAlpha * 1.4})` : `rgba(255,255,255,${haloAlpha})`;
-    ctx.fill();
-
-    // Core
-    const coreAlpha = (0.75 + breathe * 0.2) * Math.min(mouseFactor, 1.5);
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, r * mouseFactor, 0, Math.PI * 2);
-    if(isGold) {
-      ctx.fillStyle = `rgba(200,168,75,${coreAlpha})`;
-    } else {
-      ctx.fillStyle = `rgba(255,255,255,${coreAlpha * 0.65})`;
-    }
-    ctx.fill();
-
-    // Label on anchor nodes
-    if(n.label && i < 8) {
-      const labelAlpha = 0.55 + breathe * 0.15;
-      ctx.font = `500 ${Math.max(10, n.r * 0.52)}px DM Sans,sans-serif`;
-      ctx.textAlign = 'center';
-      ctx.fillStyle = isGold ? `rgba(255,235,160,${labelAlpha})` : `rgba(255,255,255,${labelAlpha * 0.8})`;
-      const lines = n.label.split('\n');
-      const lineH = n.r * 0.58;
-      lines.forEach((line, li) => {
-        const yOff = n.y + r * 2.0 + 4 + li * lineH;
-        ctx.fillText(line, n.x, yOff);
-      });
-    }
-  });
-
-  // ── 4. SHOCKWAVE EXPLOSIONS ──
-  explosions.forEach((ex, ei) => {
-    let allDone = true;
-    ex.rings.forEach(ring => {
-      if(ring.alpha <= 0) return;
-      allDone = false;
-      ctx.beginPath();
-      ctx.arc(ex.x, ex.y, ring.r, 0, Math.PI * 2);
-      const c = ring.col === 'gold'
-        ? `rgba(200,168,75,${ring.alpha})`
-        : `rgba(255,255,255,${ring.alpha})`;
-      ctx.strokeStyle = c;
-      ctx.lineWidth = ring.width;
-      ctx.stroke();
-      ring.r += ring.speed;
-      ring.alpha -= 0.022;
-      ring.width *= 0.97;
-    });
-    if(allDone) explosions.splice(ei, 1);
-  });
-
-  requestAnimationFrame(drawScene);
-}
-
-canvas.addEventListener('mousemove', e => {
-  const rect = canvas.getBoundingClientRect();
-  mouseX = e.clientX - rect.left;
-  mouseY = e.clientY - rect.top;
-});
-canvas.addEventListener('mouseleave', () => { mouseX = -999; mouseY = -999; });
-
-// Trigger explosion on click
-canvas.addEventListener('click', e => {
-  const rect = canvas.getBoundingClientRect();
-  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
-  let closest = null, closestD = 999;
-  nodes.slice(0,8).forEach(n => {
-    const d = Math.sqrt((n.x-mx)**2 + (n.y-my)**2);
-    if(d < closestD) { closestD = d; closest = n; }
-  });
-  if(closest && closestD < 80) explode(closest);
-  else explosions.push({ x: mx, y: my, rings:[
-    { r:4, maxR:120, alpha:0.7, speed:4, width:2, col:'gold' },
-    { r:4, maxR:200, alpha:0.3, speed:2.5, width:1, col:'white' },
-  ]});
-});
-
-window.addEventListener('resize', () => { resizeCanvas(); });
-resizeCanvas(); drawScene();
-
+document.addEventListener('DOMContentLoaded', function() {
 /* ── NODE DATA ── */
 const NODES = {
   toc: {
@@ -865,12 +558,7 @@ const NODES = {
     connections: ['centre', 'toc', 'evidence'],
     hint: 'Connected to: MEL system (mid-cycle reviews), Theory of change (prompts revision), Evidence use (triggers adaptation decisions)'
   },
-  adaptive: {
-    tag: 'Learning orientation', title: 'Adaptive management',
-    body: 'A good MEL system helps programmes change course before it is too late. We build in regular reflection points so that teams can look honestly at what is working, what is not, and what needs to shift. Learning is built into the rhythm of the work, not bolted on at the end.',
-    connections: ['centre', 'toc', 'evidence'],
-    hint: 'Connected to: The MEL system (mid-cycle reviews feed back in), Theory of change (prompts revision when assumptions break), Evidence (triggers adaptation decisions)'
-  }
+  
 };
 
 let activeNodeId = null;
@@ -940,7 +628,7 @@ STEPS.forEach((s, i) => {
     <div class="sc-tag">${s.tag}</div>
     <div class="sc-title">${s.title}</div>
     <div class="sc-body">${s.body}</div>
-    <div style="margin-top:20px;padding:16px 18px;background:var(--warm);border-radius:4px;border-left:3px solid var(--gold);">
+    <div style="margin-top:20px;padding:16px 18px;background:#fcfbf7;border-radius:4px;border-left:3px solid var(--gold);">
       <div style="font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Want to know more?</div>
       <div style="font-size:13px;color:var(--muted);line-height:1.7;">${s.deliverables[0]}</div>
       <a href="mailto:info@bantu-edge.com" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:12px;font-weight:500;color:var(--g);text-decoration:none;">Get in touch →</a>
@@ -1022,14 +710,18 @@ showBelief(0);
 const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
+
       e.target.classList.add('visible');
     }
   });
 }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+
 document.querySelectorAll('.reveal').forEach((el, i) => {
   el.style.transitionDelay = (i % 4) * 70 + 'ms';
   revealObs.observe(el);
 });
+
+}); // end DOMContentLoaded
 </script>
 </body>
 </html>
