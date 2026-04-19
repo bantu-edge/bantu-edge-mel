@@ -6,24 +6,24 @@
 <title>MEL Framework — Bantu-Edge</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--g:#1a3a2a;--gm:#2a5a3f;--gl:#3d7a57;--gold:#c8a84b;--gold2:#e8c96b;--cream:#fcfbf7;--warm:#f0ece4;--text:#1a1a18;--muted:#6a6a60;--white:#ffffff;--red:#c0392b;--blue:#2980b9;--teal:#1a7a6e;}
+:root{--g:#1a3a2a;--gm:#2a5a3f;--gl:#3d7a57;--gold:#c8a84b;--gold2:#e8c96b;--cream:#fcfbf7;--warm:#f0ece4;--text:#1a1a18;--muted:#6a6a60;--white:#ffffff;--blue:#2980b9;--teal:#1a7a6e;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:#fcfbf7;color:var(--text);overflow-x:hidden;}
 
-50%{opacity:1}}
-
 /* ── SECTION BASE ── */
-section{padding:96px 80px;}
-.sec-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.sec-label::after{content:'';height:1px;width:48px;background:linear-gradient(to right,var(--gold),transparent);opacity:.4;}
-.sec-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;color:var(--g);line-height:1.15;margin-bottom:14px;}
-.sec-intro{font-size:15px;color:var(--muted);line-height:1.8;max-width:640px;margin-bottom:56px;font-weight:300;}
+section{padding:80px 64px;}
+.sec-label{font-family:'DM Mono',monospace;font-size:11px;color:#4a7c59;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.sec-label::after{content:'';height:1px;width:48px;background:linear-gradient(to right,#4a7c59,transparent);opacity:.5;}
 
-/* ── WHAT'S MISSING CALLOUT ── */
-#missing{background:#fcfbf7;padding:96px 80px;}
+/* Larger, bolder headings throughout */
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,54px);font-weight:700;color:var(--g);line-height:1.12;margin-bottom:18px;}
+.sec-intro{font-size:16px;color:var(--muted);line-height:1.88;max-width:640px;margin-bottom:52px;font-weight:300;}
+
+/* ── WHAT'S MISSING ── */
+#missing{background:#fcfbf7;padding:80px 64px;}
 .missing-list{display:flex;flex-direction:column;max-width:820px;gap:0;}
-.missing-item{display:flex;align-items:center;gap:20px;padding:18px 24px 18px 20px;border-radius:8px;margin-bottom:6px;transition:transform .2s;}
+.missing-item{display:flex;align-items:center;gap:20px;padding:20px 24px 20px 20px;border-radius:8px;margin-bottom:6px;transition:transform .2s;}
 .missing-item:hover{transform:translateX(4px);}
 .missing-item:nth-child(1){background:rgba(26,58,42,0.96);}
 .missing-item:nth-child(2){background:rgba(26,58,42,0.82);}
@@ -32,66 +32,52 @@ section{padding:96px 80px;}
 .missing-item:nth-child(5){background:rgba(26,58,42,0.40);}
 .missing-item:nth-child(6){background:rgba(26,58,42,0.26);}
 .mi-connector{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
-.mi-icon{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.1);border:1.5px solid rgba(200,168,75,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.missing-item:nth-child(4) .mi-icon{background:rgba(26,58,42,0.08);border-color:rgba(26,58,42,0.25);}
-.missing-item:nth-child(5) .mi-icon{background:rgba(26,58,42,0.08);border-color:rgba(26,58,42,0.25);}
-.missing-item:nth-child(6) .mi-icon{background:rgba(26,58,42,0.08);border-color:rgba(26,58,42,0.25);}
-.missing-item:nth-child(4) .mi-icon svg,
-.missing-item:nth-child(5) .mi-icon svg,
-.missing-item:nth-child(6) .mi-icon svg{stroke:#1a3a2a !important;}
+.mi-icon{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);border:1.5px solid rgba(200,168,75,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.missing-item:nth-child(4) .mi-icon,.missing-item:nth-child(5) .mi-icon,.missing-item:nth-child(6) .mi-icon{background:rgba(26,58,42,0.08);border-color:rgba(26,58,42,0.25);}
+.missing-item:nth-child(4) .mi-icon svg,.missing-item:nth-child(5) .mi-icon svg,.missing-item:nth-child(6) .mi-icon svg{stroke:#1a3a2a !important;}
 .mi-icon svg{width:18px;height:18px;}
-.mi-line{display:none;}
 .mi-body{flex:1;}
-.mi-title{font-size:14px;font-weight:500;margin-bottom:4px;}
-.missing-item:nth-child(1) .mi-title,
-.missing-item:nth-child(2) .mi-title,
-.missing-item:nth-child(3) .mi-title{color:#ffffff;}
-.missing-item:nth-child(4) .mi-title,
-.missing-item:nth-child(5) .mi-title{color:rgba(26,58,42,0.9);}
+.mi-title{font-size:15px;font-weight:500;margin-bottom:5px;line-height:1.45;}
+.missing-item:nth-child(1) .mi-title,.missing-item:nth-child(2) .mi-title,.missing-item:nth-child(3) .mi-title{color:#ffffff;}
+.missing-item:nth-child(4) .mi-title,.missing-item:nth-child(5) .mi-title{color:rgba(26,58,42,0.9);}
 .missing-item:nth-child(6) .mi-title{color:rgba(26,58,42,0.85);}
-.mi-text{font-size:12px;line-height:1.7;}
-.missing-item:nth-child(1) .mi-text,
-.missing-item:nth-child(2) .mi-text,
-.missing-item:nth-child(3) .mi-text{color:rgba(255,255,255,0.6);}
-.missing-item:nth-child(4) .mi-text,
-.missing-item:nth-child(5) .mi-text,
-.missing-item:nth-child(6) .mi-text{color:rgba(26,58,42,0.65);}
+.mi-text{font-size:13px;line-height:1.72;}
+.missing-item:nth-child(1) .mi-text,.missing-item:nth-child(2) .mi-text,.missing-item:nth-child(3) .mi-text{color:rgba(255,255,255,0.6);}
+.missing-item:nth-child(4) .mi-text,.missing-item:nth-child(5) .mi-text,.missing-item:nth-child(6) .mi-text{color:rgba(26,58,42,0.65);}
 
-/* ── THE DIAGRAM ── */
-#diagram{background:#fcfbf7;padding:96px 80px;}
-.diagram-intro{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start;margin-bottom:64px;}
+/* ── DIAGRAM ── */
+#diagram{background:#fcfbf7;padding:80px 64px;}
+.diagram-intro{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start;margin-bottom:48px;}
 .diagram-legend{background:#fcfbf7;border:0.5px solid rgba(26,58,42,.1);border-radius:4px;padding:20px;}
 .legend-title{font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
 .legend-item{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:12px;color:var(--text);}
 .legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
-.legend-line{width:28px;height:2px;flex-shrink:0;border-radius:1px;}
 .legend-dashed{width:28px;height:0;flex-shrink:0;border-top:2px dashed;}
 
-/* SVG wrapper */
-.diagram-svg-wrap{width:100%;overflow:visible;}
-#mel-svg{width:100%;cursor:default;}
+/* SVG scrollable on mobile */
+.diagram-svg-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.diagram-svg-wrap svg{min-width:600px;width:100%;}
+.diagram-mobile-hint{display:none;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:12px;padding:10px 14px;background:rgba(200,168,75,0.08);border-radius:6px;border-left:3px solid var(--gold);}
 
-/* node states */
+/* Node states */
 .mel-node{cursor:pointer;transition:opacity .18s;}
 .mel-node:hover .node-bg{filter:brightness(1.08);}
 .mel-node.dimmed{opacity:.18;}
 .mel-node.active .node-bg{stroke-width:2.5 !important;}
-.mel-node.pulse .node-bg{animation:nodepulse 1.2s ease-in-out 2;}
-@keyframes nodepulse{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* Info panel */
 .info-panel{display:none;background:#fcfbf7;border:0.5px solid rgba(26,58,42,.12);border-radius:4px;padding:28px 28px 24px;margin-top:20px;position:relative;}
 .info-panel.show{display:block;}
-.ip-close{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:#fcfbf7;border:none;cursor:pointer;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+.ip-close{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:#fcfbf7;border:1px solid rgba(26,58,42,.15);cursor:pointer;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
 .ip-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-.ip-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--g);margin-bottom:10px;}
-.ip-body{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px;}
+.ip-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--g);margin-bottom:10px;}
+.ip-body{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:16px;}
 .ip-connections{display:flex;flex-wrap:wrap;gap:6px;}
-.ip-chip{padding:4px 12px;background:#fcfbf7;border-radius:100px;font-size:11px;color:var(--g);cursor:pointer;transition:all .2s;border:1px solid transparent;}
-.ip-chip:hover{border-color:var(--g);background:#fcfbf7;}
-.ip-hint{font-size:11px;color:var(--muted);margin-top:12px;font-style:italic;}
+.ip-chip{padding:5px 14px;background:#fcfbf7;border-radius:100px;font-size:12px;color:var(--g);cursor:pointer;transition:all .2s;border:1px solid rgba(26,58,42,.2);}
+.ip-chip:hover{border-color:var(--g);background:rgba(26,58,42,0.05);}
+.ip-hint{font-size:12px;color:var(--muted);margin-top:12px;font-style:italic;}
 
-/* ── FRAMEWORK STEPS (interactive) ── */
+/* ── FRAMEWORK STEPS ── */
 #framework{background:#fcfbf7;}
 .steps-container{display:grid;grid-template-columns:280px 1fr;gap:0;border:0.5px solid rgba(26,58,42,.1);border-radius:4px;overflow:hidden;background:#fcfbf7;}
 .steps-nav{background:var(--g);padding:0;}
@@ -101,44 +87,41 @@ section{padding:96px 80px;}
 .step-navitem.active{background:rgba(200,168,75,.15);border-left:3px solid var(--gold);}
 .sn-num{font-family:'DM Mono',monospace;font-size:11px;color:rgba(200,168,75,.5);letter-spacing:.1em;flex-shrink:0;}
 .step-navitem.active .sn-num{color:var(--gold);}
-.sn-label{font-size:12px;color:rgba(255,255,255,.55);line-height:1.4;}
+.sn-label{font-size:13px;color:rgba(255,255,255,.55);line-height:1.4;}
 .step-navitem.active .sn-label{color:var(--white);}
 .step-content{padding:36px 32px;display:none;}
 .step-content.active{display:block;}
-.sc-icon{width:48px;height:48px;border-radius:8px;background:#fcfbf7;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px;}
+/* Step icon: numbered badge (no emoji) */
+.sc-icon{width:48px;height:48px;border-radius:8px;background:rgba(26,58,42,0.06);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-family:'DM Mono',monospace;font-size:18px;font-weight:500;color:var(--gold);border:1px solid rgba(26,58,42,0.1);}
 .sc-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-.sc-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--g);margin-bottom:12px;}
-.sc-body{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:20px;}
-.sc-deliverables{display:flex;flex-direction:column;gap:8px;}
-.sc-deliv{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text);line-height:1.6;}
-.deliv-arrow{color:var(--gold);flex-shrink:0;margin-top:1px;}
+.sc-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--g);margin-bottom:12px;line-height:1.25;}
+.sc-body{font-size:15px;color:var(--muted);line-height:1.88;margin-bottom:20px;}
 
-/* ── TENSIONS SECTION ── */
-#tensions{background:#fcfbf7;}
-#tensions .sec-title{color:var(--white);}
-#tensions .sec-intro{color:rgba(255,255,255,.5);}
-#tensions .sec-label{color:var(--gold);}
-#tensions .sec-label::after{background:linear-gradient(to right,var(--gold),transparent);}
-.tensions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
-.tension-card{background:rgba(255,255,255,.04);border:1px solid rgba(200,168,75,.1);border-radius:4px;padding:24px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;}
+/* ── TENSIONS ── */
+#tensions{background:#fcfbf7;padding:80px 64px;}
+.tensions-inner{background:var(--g);border-radius:12px;padding:56px 48px;}
+
+/* Tensions: stack to single column on mobile, no sideways overflow */
+.tensions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;}
+.tension-card{background:rgba(255,255,255,.04);border:1px solid rgba(200,168,75,.1);border-radius:4px;padding:22px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;}
 .tension-card::before{content:'';position:absolute;inset:0;background:rgba(200,168,75,.04);opacity:0;transition:opacity .3s;}
 .tension-card:hover::before,.tension-card.open::before{opacity:1;}
 .tension-card:hover,.tension-card.open{border-color:rgba(200,168,75,.4);}
-.tc-poles{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
-.tc-pole{font-size:14px;font-weight:500;color:var(--white);}
-.tc-vs{font-size:9px;color:rgba(200,168,75,.5);letter-spacing:.12em;text-transform:uppercase;}
-.tc-bar{height:5px;background:rgba(255,255,255,.08);border-radius:3px;margin-bottom:10px;overflow:hidden;}
+.tc-poles{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
+.tc-pole{font-size:14px;font-weight:500;color:var(--white);line-height:1.2;}
+.tc-vs{font-size:9px;color:rgba(200,168,75,.5);letter-spacing:.12em;text-transform:uppercase;flex-shrink:0;}
+.tc-bar{height:4px;background:rgba(255,255,255,.08);border-radius:3px;margin-bottom:10px;overflow:hidden;}
 .tc-fill{height:100%;background:linear-gradient(to right,rgba(200,168,75,.7),rgba(200,168,75,.2));border-radius:3px;}
-.tc-caption{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:0;line-height:1.6;}
+.tc-caption{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65;}
 .tc-resolution{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1);}
-.tension-card.open .tc-resolution{max-height:200px;}
-.tc-res-inner{margin-top:14px;padding-top:14px;border-top:1px solid rgba(200,168,75,.1);font-size:12px;color:rgba(255,255,255,.55);line-height:1.75;}
-.tc-res-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.tension-card.open .tc-resolution{max-height:260px;}
+.tc-res-inner{margin-top:14px;padding-top:14px;border-top:1px solid rgba(200,168,75,.1);font-size:13px;color:rgba(255,255,255,.65);line-height:1.82;}
+.tc-res-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-family:'DM Mono',monospace;}
 
 /* ── BELIEFS ── */
 #beliefs{background:#fcfbf7;}
 .beliefs-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
-.btab{padding:9px 18px;font-size:12px;border-radius:100px;border:1px solid rgba(26,58,42,.18);background:transparent;color:var(--muted);cursor:pointer;transition:all .22s;font-family:'DM Sans',sans-serif;}
+.btab{padding:9px 18px;font-size:13px;border-radius:100px;border:1px solid rgba(26,58,42,.18);background:transparent;color:var(--muted);cursor:pointer;transition:all .22s;font-family:'DM Sans',sans-serif;}
 .btab:hover{border-color:var(--g);color:var(--g);}
 .btab.active{background:var(--g);color:var(--white);border-color:var(--g);}
 .belief-display{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
@@ -147,49 +130,77 @@ section{padding:96px 80px;}
 .bd-tension{background:var(--g);border-radius:4px;padding:28px;opacity:0;transform:translateY(6px);transition:all .35s;}
 .bd-tension.in{opacity:1;transform:translateY(0);}
 .bd-tag{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-.bd-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--g);margin-bottom:10px;}
+.bd-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--g);margin-bottom:10px;}
 .bd-tension .bd-title{color:var(--white);}
-.bd-text{font-size:13px;color:var(--muted);line-height:1.8;}
-.bd-tension .bd-text{color:rgba(255,255,255,.55);}
-.bd-challenge{margin-top:14px;padding:12px 14px;background:#fcfbf7;border-radius:4px;font-size:12px;color:var(--muted);border-left:2px solid rgba(200,168,75,.4);line-height:1.7;}
-.bd-tension .bd-challenge{background:rgba(255,255,255,.06);border-left-color:var(--gold);color:rgba(255,255,255,.45);}
+.bd-text{font-size:14px;color:var(--muted);line-height:1.85;}
+.bd-tension .bd-text{color:rgba(255,255,255,.6);}
+.bd-challenge{margin-top:14px;padding:12px 14px;background:#fcfbf7;border-radius:4px;font-size:13px;color:var(--muted);border-left:2px solid rgba(200,168,75,.4);line-height:1.75;}
+.bd-tension .bd-challenge{background:rgba(255,255,255,.06);border-left-color:var(--gold);color:rgba(255,255,255,.5);}
 
 /* ── QUOTE ── */
-.quote-section{padding:48px 80px 64px;background:#fcfbf7;text-align:center;}
+.quote-section{padding:48px 64px 64px;background:#fcfbf7;text-align:center;}
 .quote-inner{background:var(--g);border-radius:12px;padding:56px 64px;max-width:860px;margin:0 auto;}
 .quote-mark{font-family:'Playfair Display',serif;font-size:80px;color:rgba(200,168,75,.15);line-height:.5;margin-bottom:16px;}
-.quote-text{font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,26px);font-style:italic;color:var(--white);max-width:680px;margin:0 auto 20px;line-height:1.6;font-weight:400;}
+.quote-text{font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,26px);font-style:italic;color:var(--white);max-width:680px;margin:0 auto 20px;line-height:1.65;font-weight:400;}
 .quote-attr{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;}
 
 /* ── CTA ── */
-.cta-sec{padding:80px;background:#fcfbf7;text-align:center;}
-.cta-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,40px);font-weight:700;color:var(--g);margin-bottom:12px;}
-.cta-text{font-size:15px;color:var(--muted);max-width:480px;margin:0 auto 32px;line-height:1.75;}
+.cta-sec{padding:80px 64px;background:#fcfbf7;text-align:center;}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--g);margin-bottom:14px;}
+.cta-text{font-size:16px;color:var(--muted);max-width:500px;margin:0 auto 32px;line-height:1.82;}
 .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--g);color:var(--white);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .25s;}
 .cta-btn:hover{background:var(--gm);transform:translateY(-2px);}
 
 /* ── ANIMATIONS ── */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
-@media(max-width:900px){
-  nav{padding:0 20px;} .nav-links{display:none;}
-  section{padding:60px 24px;}
+
+/* ════════════════════
+   MOBILE — ≤768px
+════════════════════ */
+@media(max-width:768px){
+  section{padding:52px 20px;}
+  #missing{padding:52px 20px;}
+  #diagram{padding:52px 20px;}
+  #tensions{padding:52px 20px;}
+  .cta-sec{padding:52px 20px;}
+  .quote-section{padding:40px 20px;}
+
+  /* Diagram: single column header, legend hidden, svg scrollable */
   .diagram-intro{grid-template-columns:1fr;}
+  .diagram-legend{display:none;}
+  .diagram-mobile-hint{display:block;}
+  .diagram-svg-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid rgba(26,58,42,0.06);border-radius:8px;padding:6px 0;}
+
+  /* Framework steps: horizontal scrollable nav */
   .steps-container{grid-template-columns:1fr;}
-  .steps-nav{display:flex;overflow-x:auto;padding:0;}
-  .step-navitem{border-bottom:none;border-right:1px solid rgba(255,255,255,.06);flex-shrink:0;}
+  .steps-nav{display:flex;overflow-x:auto;padding:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .steps-nav::-webkit-scrollbar{display:none;}
+  .step-navitem{border-bottom:none;border-right:1px solid rgba(255,255,255,.06);flex-shrink:0;min-width:160px;padding:14px 16px;}
+  .step-content{padding:24px 20px;}
+
+  /* Tensions: full single column — no sideways scrolling */
+  .tensions-inner{padding:32px 20px;}
+  .tensions-grid{grid-template-columns:1fr;}
+
+  /* Beliefs: stack */
   .belief-display{grid-template-columns:1fr;}
 
-  #missing{padding:48px 24px;}
-  .quote-section,.cta-sec{padding:60px 24px;}
-  .diagram-legend{display:none;}
+  /* Quote */
+  .quote-inner{padding:36px 24px;}
+}
+
+@media(max-width:480px){
+  .sec-title{font-size:28px;}
+  .missing-item{flex-direction:column;align-items:flex-start;gap:10px;}
 }
 </style>
 </head>
 <body>
 
-
-<!-- WHAT'S MISSING IN STANDARD MEL -->
+<!-- ════════════════════
+     SECTION 1: SIX GAPS
+════════════════════ -->
 <section id="missing">
   <div class="sec-label">What standard MEL misses</div>
   <h2 class="sec-title">Six gaps in conventional frameworks</h2>
@@ -197,106 +208,94 @@ section{padding:96px 80px;}
   <div class="missing-list">
 
     <div class="missing-item reveal">
-      <div class="mi-connector">
-        <div class="mi-icon">
-          <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
-            <circle cx="9" cy="6" r="3"/><path d="M3 15c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
-            <circle cx="14" cy="5" r="2"/><path d="M16.5 13c0-2.2-1.1-4-2.5-4"/>
-          </svg>
-        </div>
-        <div class="mi-line"></div>
-      </div>
+      <div class="mi-connector"><div class="mi-icon">
+        <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="9" cy="6" r="3"/><path d="M3 15c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+          <circle cx="14" cy="5" r="2"/><path d="M16.5 13c0-2.2-1.1-4-2.5-4"/>
+        </svg>
+      </div></div>
       <div class="mi-body">
         <div class="mi-title">Communities are treated as data sources, not decision-makers</div>
-        <div class="mi-text">Communities appear as survey respondents and focus group participants. They are rarely involved in designing what gets measured, interpreting what findings mean, or deciding what happens next.</div>
+        <div class="mi-text">Standard MEL extracts information from communities but rarely returns it in usable form, or builds community agency into the design of the system itself.</div>
       </div>
     </div>
 
     <div class="missing-item reveal">
-      <div class="mi-connector">
-        <div class="mi-icon">
-          <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
-            <path d="M2 14 L6 8 L10 11 L14 5 L17 7"/><circle cx="6" cy="8" r="1.5" fill="#c8a84b" stroke="none"/><circle cx="14" cy="5" r="1.5" fill="#c8a84b" stroke="none"/>
-          </svg>
-        </div>
-        <div class="mi-line"></div>
-      </div>
+      <div class="mi-connector"><div class="mi-icon">
+        <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
+          <polyline points="2,14 6,8 10,11 14,4 16,6"/><line x1="2" y1="14" x2="16" y2="14"/>
+        </svg>
+      </div></div>
       <div class="mi-body">
         <div class="mi-title">History and power are treated as background, not as data</div>
-        <div class="mi-text">Inequality, historical exclusion, and governance complexity get noted in narrative sections — then left out of the actual analysis. Standard logframes have no field for why things are the way they are.</div>
+        <div class="mi-text">Structural inequality, colonial legacies, and power dynamics are not context notes — they actively shape what change is possible and what evidence means.</div>
       </div>
     </div>
 
     <div class="missing-item reveal">
-      <div class="mi-connector">
-        <div class="mi-icon">
-          <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
-            <circle cx="9" cy="9" r="7"/><line x1="9" y1="2" x2="9" y2="16"/><path d="M5 5.5 Q9 3 13 5.5"/><path d="M5 12.5 Q9 15 13 12.5"/>
-          </svg>
-        </div>
-        <div class="mi-line"></div>
-      </div>
+      <div class="mi-connector"><div class="mi-icon">
+        <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="9" cy="9" r="7"/><line x1="2" y1="9" x2="16" y2="9"/>
+          <path d="M9 2 Q13 6 13 9 Q13 12 9 16 Q5 12 5 9 Q5 6 9 2"/>
+        </svg>
+      </div></div>
       <div class="mi-body">
         <div class="mi-title">Gender and inclusion are a column, not a lens</div>
-        <div class="mi-text">GESI appears as a disaggregation category or a standalone indicator. It rarely shapes how the entire MEL system is designed — who participates, what gets measured, how findings are used.</div>
+        <div class="mi-text">Disaggregating by sex is not a GESI framework. Genuine inclusion requires rethinking who designs the system, what gets measured, and how findings are interpreted.</div>
       </div>
     </div>
 
     <div class="missing-item reveal">
-      <div class="mi-connector">
-        <div class="mi-icon">
-          <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
-            <path d="M4 9 L14 9"/><path d="M9 4 L9 14"/><circle cx="9" cy="9" r="7"/>
-          </svg>
-        </div>
-        <div class="mi-line"></div>
-      </div>
+      <div class="mi-connector"><div class="mi-icon">
+        <svg viewBox="0 0 18 18" fill="none" stroke="#1a3a2a" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="9" cy="9" r="7"/><circle cx="9" cy="9" r="3"/>
+          <line x1="9" y1="2" x2="9" y2="6"/><line x1="9" y1="12" x2="9" y2="16"/>
+          <line x1="2" y1="9" x2="6" y2="9"/><line x1="12" y1="9" x2="16" y2="9"/>
+        </svg>
+      </div></div>
       <div class="mi-body">
         <div class="mi-title">Accountability and learning are assumed to be the same thing</div>
-        <div class="mi-text">Most frameworks treat reporting to funders and learning for practice as naturally compatible. They are not. The tension between them is real, and it needs deliberate design — not wishful thinking.</div>
+        <div class="mi-text">Reporting for compliance and learning for improvement require different data, different relationships, and different psychological conditions. Conflating them damages both.</div>
       </div>
     </div>
 
     <div class="missing-item reveal">
-      <div class="mi-connector">
-        <div class="mi-icon">
-          <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
-            <rect x="3" y="2" width="12" height="14" rx="2"/><line x1="6" y1="7" x2="12" y2="7"/><line x1="6" y1="10" x2="10" y2="10"/>
-            <path d="M10 13 L15 13 M13 11 L15 13 L13 15" stroke-width="1.3"/>
-          </svg>
-        </div>
-        <div class="mi-line"></div>
-      </div>
+      <div class="mi-connector"><div class="mi-icon">
+        <svg viewBox="0 0 18 18" fill="none" stroke="#1a3a2a" stroke-width="1.5" stroke-linecap="round">
+          <path d="M4 3h10a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1z"/>
+          <line x1="6" y1="7" x2="12" y2="7"/><line x1="6" y1="10" x2="10" y2="10"/>
+        </svg>
+      </div></div>
       <div class="mi-body">
         <div class="mi-title">Reports are built to be filed, not to be used</div>
-        <div class="mi-text">Evidence usability is an afterthought. Community feedback products, if they exist at all, are translations of technical documents. Nobody asks at the design stage: who actually needs to use this, and how?</div>
+        <div class="mi-text">Most MEL products are designed for submission, not for decision-making. The question of who will read this and what they will do with it rarely shapes the design.</div>
       </div>
     </div>
 
     <div class="missing-item reveal">
-      <div class="mi-connector">
-        <div class="mi-icon">
-          <svg viewBox="0 0 18 18" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round">
-            <circle cx="9" cy="9" r="7"/><line x1="9" y1="5" x2="9" y2="9"/><circle cx="9" cy="12" r="1" fill="#c8a84b" stroke="none"/>
-          </svg>
-        </div>
-        <div class="mi-line"></div>
-      </div>
+      <div class="mi-connector"><div class="mi-icon">
+        <svg viewBox="0 0 18 18" fill="none" stroke="#1a3a2a" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="9" cy="9" r="7"/><line x1="9" y1="6" x2="9" y2="9.5"/>
+          <circle cx="9" cy="12.5" r=".8" fill="#1a3a2a"/>
+        </svg>
+      </div></div>
       <div class="mi-body">
         <div class="mi-title">Uncomfortable findings get smoothed over</div>
-        <div class="mi-text">Systems built to surface positive results are not trustworthy. The pressure to show success — to funders, to boards, to partners — quietly shapes what gets measured, reported, and remembered.</div>
+        <div class="mi-text">MEL systems that only surface positive findings are not trustworthy learning systems. Structural incentives routinely distort what programmes report about themselves.</div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- THE DIAGRAM -->
+<!-- ════════════════════
+     SECTION 2: DIAGRAM
+════════════════════ -->
 <section id="diagram">
   <div class="diagram-intro">
     <div>
       <div class="sec-label">The Bantu-Edge MEL System</div>
-      <h2 class="sec-title">A living activity system,<br>not a linear chain</h2>
+      <h2 class="sec-title">A living activity system, not a linear chain</h2>
       <p class="sec-intro" style="margin-bottom:0;">Click any node to explore what it contains and how it connects to the others. The GESI spine runs through everything. The tensions are the points where learning happens. Hover connections to trace relationships.</p>
     </div>
     <div class="diagram-legend">
@@ -308,79 +307,69 @@ section{padding:96px 80px;}
       <div class="legend-item"><div class="legend-dot" style="background:#8B4513;"></div> Context + history output</div>
       <div class="legend-item"><div class="legend-dot" style="background:#1a7a6e;"></div> Evidence + action output</div>
       <div class="legend-item"><div class="legend-dashed" style="border-color:rgba(200,168,75,.5);"></div> Adaptive learning loop</div>
-      <div style="margin-top:14px;font-size:11px;color:var(--muted);line-height:1.6;">Inputs feed the system. The system produces outputs. The adaptive loop feeds learning back to the top. GESI shapes everything throughout. Click any node to explore.</div>
+      <div style="margin-top:14px;font-size:11px;color:var(--muted);line-height:1.65;">Inputs feed the system. The system produces outputs. The adaptive loop feeds learning back to the top. GESI shapes everything throughout. Click any node to explore.</div>
     </div>
   </div>
 
-  <!-- THE SVG DIAGRAM — logic flow, GESI as full wash, white centre -->
+  <div class="diagram-mobile-hint">Swipe sideways to explore the full diagram — then tap any node to see details.</div>
+
   <div class="diagram-svg-wrap">
-    <svg id="mel-svg" viewBox="0 0 820 560">
+    <svg id="mel-svg" viewBox="0 0 820 560" style="min-width:600px;width:100%;">
       <defs>
         <marker id="arrf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </marker>
       </defs>
 
-      <!-- ── GESI BACKGROUND WASH — full width, behind everything ── -->
+      <!-- GESI BACKGROUND WASH -->
       <rect x="16" y="16" width="788" height="528" rx="12" fill="rgba(200,168,75,0.04)" stroke="rgba(200,168,75,0.18)" stroke-width="1"/>
-      <!-- GESI label top-left -->
       <rect x="16" y="16" width="88" height="22" rx="4" fill="rgba(200,168,75,0.12)"/>
       <text x="60" y="31" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="rgba(200,168,75,0.75)" letter-spacing="2">GESI LENS</text>
-      <!-- GESI label bottom-right -->
       <rect x="716" y="522" width="88" height="22" rx="4" fill="rgba(200,168,75,0.12)"/>
       <text x="760" y="537" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="rgba(200,168,75,0.75)" letter-spacing="2">GESI LENS</text>
-      <!-- Subtle diagonal lines across wash to show it covers all -->
       <line x1="16" y1="280" x2="804" y2="280" stroke="rgba(200,168,75,0.07)" stroke-width="1" stroke-dasharray="6 8"/>
 
-      <!-- ── FLOW LABEL: ROW 1 — INPUTS ── -->
+      <!-- FLOW: INPUTS -->
       <text x="410" y="56" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="rgba(26,58,42,0.35)" letter-spacing="3">INPUTS</text>
-
-      <!-- ── ROW 1: Theory of change + Community voice — side by side ── -->
 
       <!-- NODE: Theory of change -->
       <g class="mel-node" id="n-toc" onclick="activateNode('toc')">
         <rect class="node-bg" x="48" y="68" width="300" height="82" rx="10" fill="#ffffff" stroke="#1a3a2a" stroke-width="1.2" stroke-opacity=".35"/>
-        <rect x="48" y="68" width="5" height="82" rx="3" fill="#1a3a2a" opacity=".5" style="border-radius:3px 0 0 3px"/>
-        <!-- lightbulb icon -->
+        <rect x="48" y="68" width="5" height="82" rx="3" fill="#1a3a2a" opacity=".5"/>
         <circle cx="84" cy="96" r="10" fill="none" stroke="#1a3a2a" stroke-width="1.3" opacity=".45"/>
         <line x1="84" y1="106" x2="84" y2="112" stroke="#1a3a2a" stroke-width="1.3" opacity=".45"/>
         <line x1="80" y1="114" x2="88" y2="114" stroke="#1a3a2a" stroke-width="1.3" opacity=".45"/>
         <text x="106" y="93" font-family="DM Sans,sans-serif" font-size="13" font-weight="500" fill="#1a1a18">Theory of change</text>
         <text x="106" y="110" font-family="DM Sans,sans-serif" font-size="11" fill="#6a6a60">What we believe will happen — and why</text>
-        <text x="58" y="138" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(200,168,75,0.8)">Click to explore →</text>
+        <text x="58" y="138" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(200,168,75,0.8)">Tap to explore →</text>
       </g>
 
       <!-- NODE: Community voice -->
       <g class="mel-node" id="n-community" onclick="activateNode('community')">
         <rect class="node-bg" x="472" y="68" width="300" height="82" rx="10" fill="#ffffff" stroke="#2980b9" stroke-width="1.2" stroke-opacity=".35"/>
         <rect x="472" y="68" width="5" height="82" rx="3" fill="#2980b9" opacity=".5"/>
-        <!-- people icon -->
         <circle cx="508" cy="93" r="8" fill="none" stroke="#2980b9" stroke-width="1.3" opacity=".55"/>
         <path d="M498 111 Q508 105 518 111" fill="none" stroke="#2980b9" stroke-width="1.3" opacity=".55"/>
         <circle cx="524" cy="91" r="6" fill="none" stroke="#2980b9" stroke-width="1" opacity=".35"/>
         <text x="540" y="93" font-family="DM Sans,sans-serif" font-size="13" font-weight="500" fill="#1a1a18">Community voice</text>
         <text x="540" y="110" font-family="DM Sans,sans-serif" font-size="11" fill="#6a6a60">Partners in design, not just sources</text>
-        <text x="482" y="138" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(41,128,185,0.7)">Click to explore →</text>
+        <text x="482" y="138" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(41,128,185,0.7)">Tap to explore →</text>
       </g>
 
-      <!-- ── ARROWS: inputs flow down into centre ── -->
-      <line x1="198" y1="150" x2="340" y2="210" stroke="#1a3a2a" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)" fill="none"/>
-      <line x1="622" y1="150" x2="478" y2="210" stroke="#2980b9" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)" fill="none"/>
+      <!-- Arrows: inputs to centre -->
+      <line x1="198" y1="150" x2="340" y2="210" stroke="#1a3a2a" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)"/>
+      <line x1="622" y1="150" x2="478" y2="210" stroke="#2980b9" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)"/>
 
-      <!-- ── FLOW LABEL: ROW 2 — SYSTEM ── -->
+      <!-- FLOW: THE SYSTEM -->
       <text x="410" y="196" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="rgba(26,58,42,0.35)" letter-spacing="3">THE SYSTEM</text>
 
-      <!-- ── ROW 2: MEL System Centre — white, gold border, full width ── -->
+      <!-- NODE: MEL Centre -->
       <g class="mel-node" id="n-centre" onclick="activateNode('centre')">
         <rect class="node-bg" x="100" y="208" width="620" height="106" rx="12" fill="#ffffff" stroke="#c8a84b" stroke-width="2"/>
-        <!-- top gold accent bar -->
         <rect x="100" y="208" width="620" height="5" rx="3" fill="rgba(200,168,75,0.6)"/>
-        <!-- MEL acronym centred above pillars -->
         <text x="410" y="228" text-anchor="middle" font-family="DM Mono,monospace" font-size="11" letter-spacing="8" fill="rgba(200,168,75,0.6)">M · E · L</text>
-        <!-- hexagon icon -->
         <polygon points="124,248 136,241 148,248 148,262 136,269 124,262" fill="rgba(200,168,75,0.15)" stroke="#c8a84b" stroke-width="1.3"/>
         <circle cx="136" cy="255" r="3.5" fill="#c8a84b" opacity=".6"/>
-        <!-- Three sub-labels: Monitor · Evaluate · Learn -->
         <rect x="168" y="233" width="148" height="56" rx="6" fill="rgba(26,58,42,0.04)"/>
         <text x="172" y="249" font-family="DM Mono,monospace" font-size="9" fill="rgba(26,58,42,0.4)" letter-spacing="1">M</text>
         <text x="242" y="252" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#1a3a2a">Monitor</text>
@@ -393,61 +382,54 @@ section{padding:96px 80px;}
         <text x="508" y="249" font-family="DM Mono,monospace" font-size="9" fill="rgba(26,58,42,0.4)" letter-spacing="1">L</text>
         <text x="578" y="252" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#1a3a2a">Learn</text>
         <text x="578" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#6a6a60">Change course if needed</text>
-        <!-- dividers between three -->
         <line x1="328" y1="240" x2="328" y2="282" stroke="rgba(200,168,75,0.22)" stroke-width=".8"/>
         <line x1="504" y1="240" x2="504" y2="282" stroke="rgba(200,168,75,0.22)" stroke-width=".8"/>
-        <!-- bottom label -->
-        <text x="410" y="304" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(200,168,75,0.65)">Bantu-Edge · Click to explore</text>
+        <text x="410" y="304" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(200,168,75,0.65)">Bantu-Edge · Tap to explore</text>
       </g>
 
-      <!-- ── ARROWS: system flows down into outputs ── -->
-      <line x1="278" y1="304" x2="198" y2="366" stroke="#1a3a2a" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)" fill="none"/>
-      <line x1="542" y1="304" x2="622" y2="366" stroke="#1a7a6e" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)" fill="none"/>
+      <!-- Arrows: centre to outputs -->
+      <line x1="278" y1="304" x2="198" y2="366" stroke="#1a3a2a" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)"/>
+      <line x1="542" y1="304" x2="622" y2="366" stroke="#1a7a6e" stroke-width="1.5" stroke-opacity=".25" marker-end="url(#arrf)"/>
 
-      <!-- ── FLOW LABEL: ROW 3 — OUTPUTS ── -->
+      <!-- FLOW: OUTPUTS -->
       <text x="410" y="354" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="rgba(26,58,42,0.35)" letter-spacing="3">OUTPUTS</text>
-
-      <!-- ── ROW 3: Context + history + Evidence + action ── -->
 
       <!-- NODE: Context + history -->
       <g class="mel-node" id="n-context" onclick="activateNode('context')">
         <rect class="node-bg" x="48" y="368" width="300" height="82" rx="10" fill="#ffffff" stroke="#8B4513" stroke-width="1.2" stroke-opacity=".3"/>
         <rect x="48" y="368" width="5" height="82" rx="3" fill="#8B4513" opacity=".4"/>
-        <!-- map pin icon -->
         <circle cx="82" cy="395" r="9" fill="none" stroke="#8B4513" stroke-width="1.3" opacity=".45"/>
         <circle cx="82" cy="395" r="3" fill="#8B4513" opacity=".35"/>
         <line x1="82" y1="404" x2="82" y2="414" stroke="#8B4513" stroke-width="1.3" opacity=".45"/>
         <text x="104" y="393" font-family="DM Sans,sans-serif" font-size="13" font-weight="500" fill="#1a1a18">Context + history</text>
         <text x="104" y="410" font-family="DM Sans,sans-serif" font-size="11" fill="#6a6a60">The ground everything grows from</text>
-        <text x="58" y="438" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(139,69,19,0.6)">Click to explore →</text>
+        <text x="58" y="438" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(139,69,19,0.6)">Tap to explore →</text>
       </g>
 
       <!-- NODE: Evidence + action -->
       <g class="mel-node" id="n-evidence" onclick="activateNode('evidence')">
         <rect class="node-bg" x="472" y="368" width="300" height="82" rx="10" fill="#ffffff" stroke="#1a7a6e" stroke-width="1.2" stroke-opacity=".35"/>
         <rect x="472" y="368" width="5" height="82" rx="3" fill="#1a7a6e" opacity=".5"/>
-        <!-- target icon -->
         <circle cx="508" cy="396" r="11" fill="none" stroke="#1a7a6e" stroke-width="1" opacity=".45"/>
         <circle cx="508" cy="396" r="5.5" fill="none" stroke="#1a7a6e" stroke-width="1" opacity=".45"/>
         <circle cx="508" cy="396" r="2.5" fill="#1a7a6e" opacity=".5"/>
         <text x="530" y="393" font-family="DM Sans,sans-serif" font-size="13" font-weight="500" fill="#1a1a18">Evidence + action</text>
         <text x="530" y="410" font-family="DM Sans,sans-serif" font-size="11" fill="#6a6a60">Built to be used, not just produced</text>
-        <text x="482" y="438" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(26,122,110,0.6)">Click to explore →</text>
+        <text x="482" y="438" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(26,122,110,0.6)">Tap to explore →</text>
       </g>
 
-      <!-- ── ADAPTIVE LOOP — curved arrow back up on right side ── -->
+      <!-- ADAPTIVE LOOP -->
       <path d="M 772 440 Q 810 400 810 280 Q 810 160 772 120" stroke="rgba(200,168,75,0.3)" stroke-width="1.2" stroke-dasharray="6 4" fill="none" marker-end="url(#arrf)"/>
       <text x="816" y="285" text-anchor="start" font-family="DM Mono,monospace" font-size="8" fill="rgba(200,168,75,0.5)" letter-spacing="1">adaptive</text>
       <text x="816" y="296" text-anchor="start" font-family="DM Mono,monospace" font-size="8" fill="rgba(200,168,75,0.5)" letter-spacing="1">learning</text>
       <text x="816" y="307" text-anchor="start" font-family="DM Mono,monospace" font-size="8" fill="rgba(200,168,75,0.5)" letter-spacing="1">loop</text>
 
-      <!-- ── GESI node — clickable badge, top right corner of wash ── -->
+      <!-- GESI badge -->
       <g class="mel-node" id="n-gesi" onclick="activateNode('gesi')">
         <rect x="638" y="22" width="158" height="28" rx="5" fill="rgba(200,168,75,0.12)" stroke="rgba(200,168,75,0.4)" stroke-width=".8"/>
         <circle cx="656" cy="36" r="5" fill="none" stroke="rgba(200,168,75,0.6)" stroke-width="1"/>
         <text x="670" y="40" font-family="DM Sans,sans-serif" font-size="11" font-weight="500" fill="#c8a84b">GESI runs through all</text>
       </g>
-
     </svg>
   </div>
 
@@ -462,29 +444,34 @@ section{padding:96px 80px;}
   </div>
 </section>
 
-<!-- FRAMEWORK STEPS -->
+<!-- ════════════════════
+     SECTION 3: FRAMEWORK STEPS
+════════════════════ -->
 <section id="framework">
   <div class="sec-label">Five components</div>
   <h2 class="sec-title">How a Bantu-Edge MEL<br>engagement actually works</h2>
   <p class="sec-intro">Each component is adapted to your programme's context, scale, and phase. Click a step to explore what we do and what you get.</p>
-
   <div class="steps-container">
     <div class="steps-nav" id="steps-nav"></div>
     <div id="step-panels"></div>
   </div>
 </section>
 
-<!-- TENSIONS -->
+<!-- ════════════════════
+     SECTION 4: TENSIONS
+════════════════════ -->
 <section id="tensions" style="background:#fcfbf7;">
-  <div style="background:var(--g);border-radius:12px;padding:56px 48px;">
+  <div class="tensions-inner">
     <div class="sec-label" style="color:var(--gold2);">Productive contradictions</div>
     <h2 class="sec-title" style="color:var(--white);">The tensions we hold<br>deliberately</h2>
-    <p class="sec-intro" style="color:rgba(255,255,255,.5);">We do not resolve these tensions prematurely. We design MEL systems that can navigate them. Click any tension to see how.</p>
+    <p class="sec-intro" style="color:rgba(255,255,255,.55);">We do not resolve these tensions prematurely. We design MEL systems that can navigate them. Click any tension to see how.</p>
     <div class="tensions-grid" id="tensions-grid"></div>
   </div>
 </section>
 
-<!-- BELIEFS -->
+<!-- ════════════════════
+     SECTION 5: BELIEFS
+════════════════════ -->
 <section id="beliefs">
   <div class="sec-label">What we believe</div>
   <h2 class="sec-title">Five convictions that shape<br>every engagement</h2>
@@ -509,13 +496,10 @@ section{padding:96px 80px;}
   <a href="https://www.bantu-edge.com/contact-us" class="cta-btn" target="_blank">Get in touch →</a>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
-
-
-/* ── GLOBAL FUNCTIONS (called from SVG onclick attributes) ── */
+<script>
+/* ── GLOBAL FUNCTIONS ── */
 let activeNodeId = null;
-const NODES_REF = {}; // populated after DOMContentLoaded
+const NODES_REF = {};
 
 function activateNode(id) {
   if (activeNodeId === id) { closePanel(); return; }
@@ -554,6 +538,7 @@ function closePanel() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
 /* ── NODE DATA ── */
 const NODES = {
   toc: {
@@ -583,13 +568,13 @@ const NODES = {
   evidence: {
     tag: 'Usability', title: 'Evidence designed to travel',
     body: 'A rigorous evaluation that produces no change in practice is a missed opportunity. From the design stage, we ask: who needs to use this evidence, and how? That question shapes indicator selection, data collection methods, reporting formats, and the timing of feedback loops. Usability is designed in — not hoped for.',
-    connections: ['centre', 'adaptive', 'reporting'],
-    hint: 'Connected to: MEL system (where evidence feeds back), Adaptive management (evidence triggers adaptation), Usable reporting (multiple formats)'
+    connections: ['centre', 'adaptive'],
+    hint: 'Connected to: MEL system (where evidence feeds back), Adaptive management (evidence triggers adaptation)'
   },
   gesi: {
     tag: 'Cross-cutting spine', title: 'GESI lens',
     body: 'Gender, equity, and social inclusion is not a standalone indicator set — it is an analytical lens applied from design through to reporting. This means attending to whose voice is centred, who bears the burden of data collection, and whether the MEL system reinforces or challenges existing power dynamics.',
-    connections: ['community', 'context', 'centre', 'methods'],
+    connections: ['community', 'context', 'centre'],
     hint: 'The GESI spine runs through every component. It shapes who participates, what gets measured, and how findings are interpreted.'
   },
   adaptive: {
@@ -597,46 +582,17 @@ const NODES = {
     body: 'A good MEL system helps programmes change course before it is too late. We build in regular reflection points — not just end-of-year reports — so that teams can look honestly at what is working, what is not, and what needs to shift. Learning is built into the rhythm of the work, not bolted on at the end.',
     connections: ['centre', 'toc', 'evidence'],
     hint: 'Connected to: MEL system (mid-cycle reviews), Theory of change (prompts revision), Evidence use (triggers adaptation decisions)'
-  },
-  
+  }
 };
 Object.assign(NODES_REF, NODES);
 
-// activateNode is global — see above
-function _populateNodesRef() {
-  if (activeNodeId === id) { closePanel(); return; }
-  activeNodeId = id;
-  document.querySelectorAll('.mel-node').forEach(el => {
-    el.classList.remove('active', 'dimmed');
-    el.classList.add('dimmed');
-  });
-  const el = document.getElementById('n-' + id);
-  if (el) { el.classList.remove('dimmed'); el.classList.add('active'); }
-  const n = NODES[id];
-  if (n.connections) n.connections.forEach(cid => {
-    const cel = document.getElementById('n-' + cid);
-    if (cel) cel.classList.remove('dimmed');
-  });
-  const panel = document.getElementById('info-panel');
-  document.getElementById('ip-tag').textContent = n.tag;
-  document.getElementById('ip-title').textContent = n.title;
-  document.getElementById('ip-body').textContent = n.body;
-  document.getElementById('ip-connections').innerHTML = (n.connections || []).map(cid => {
-    const cn = NODES[cid];
-    return cn ? `<span class="ip-chip" onclick="activateNode('${cid}')">${cn.title}</span>` : '';
-  }).join('');
-  document.getElementById('ip-hint').textContent = n.hint || '';
-  panel.classList.add('show');
-  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-/* ── FRAMEWORK STEPS ── */
+/* ── FRAMEWORK STEPS — no emojis, numbered badges ── */
 const STEPS = [
-  { icon: '🔭', tag: 'Step 1', label: 'We start with your theory of change', title: 'We start with your theory of change', body: 'Before anything else, we help you get honest about what you think will happen — and why. This is not a box-ticking exercise. We work with your team to surface the real assumptions underneath your programme, and agree on what evidence would tell you if those assumptions are holding.', deliverables: ['Get in touch to learn how we approach this step', 'Every engagement starts differently', 'The detail is part of what we bring to the table'] },
-  { icon: '📐', tag: 'Step 2', label: 'We design indicators that actually fit', title: 'We design indicators that actually fit', body: "We build indicator sets that satisfy your funder's requirements and generate genuine learning — not one or the other. Context matters here. What works as an indicator in one community may be meaningless in another. We design for your programme, not from a template.", deliverables: ['Get in touch to discuss what your programme needs', 'We adapt to your context and sector', 'Contact us for a scoping conversation'] },
-  { icon: '🌍', tag: 'Step 3', label: 'We collect data with communities, not just from them', title: 'We collect data with communities, not just from them', body: 'Numbers tell you what happened. But why it happened — and what it means — requires deeper engagement. We combine quantitative tracking with qualitative insight and participatory approaches that treat community members as partners in making sense of what is going on.', deliverables: ['Our methods vary by context and programme phase', 'Ask us about our approach to GESI-sensitive data collection', 'Get in touch to discuss your specific context'] },
-  { icon: '🔄', tag: 'Step 4', label: 'We build in space to change course', title: 'We build in space to change course', body: 'A MEL system that only reports at the end of a programme cannot help you improve it. We design regular reflection points so that your team can look honestly at what is working, what is not, and what needs to shift — while there is still time to act on it.', deliverables: ['How we structure reflection depends on your programme rhythm', 'Talk to us about mid-cycle learning reviews', 'Contact us to explore what this looks like in practice'] },
-  { icon: '📢', tag: 'Step 5', label: 'We make evidence that people will actually use', title: 'We make evidence that people will actually use', body: 'The best evidence in the world does nothing if it sits in a PDF nobody reads. We design reporting products from the start with their end-users in mind — whether that is a funder, a programme director, or the communities your work is meant to serve.', deliverables: ['Ask us about our approach to community-facing knowledge products', 'Every reporting product is designed, not just written', 'Contact us to discuss what usable evidence looks like for your programme'] }
+  { num: '01', tag: 'Step 1', label: 'We start with your theory of change', title: 'We start with your theory of change', body: 'Before anything else, we help you get honest about what you think will happen — and why. This is not a box-ticking exercise. We work with your team to surface the real assumptions underneath your programme, and agree on what evidence would tell you if those assumptions are holding.', tease: 'Get in touch to learn how we approach this step.' },
+  { num: '02', tag: 'Step 2', label: 'We design indicators that actually fit', title: 'We design indicators that actually fit', body: "We build indicator sets that satisfy your funder's requirements and generate genuine learning — not one or the other. Context matters here. What works as an indicator in one community may be meaningless in another. We design for your programme, not from a template.", tease: 'Get in touch to discuss what your programme needs.' },
+  { num: '03', tag: 'Step 3', label: 'We collect data with communities, not just from them', title: 'We collect data with communities, not just from them', body: 'Numbers tell you what happened. But why it happened — and what it means — requires deeper engagement. We combine quantitative tracking with qualitative insight and participatory approaches that treat community members as partners in making sense of what is going on.', tease: 'Ask us about our approach to GESI-sensitive data collection.' },
+  { num: '04', tag: 'Step 4', label: 'We build in space to change course', title: 'We build in space to change course', body: 'A MEL system that only reports at the end of a programme cannot help you improve it. We design regular reflection points so that your team can look honestly at what is working, what is not, and what needs to shift — while there is still time to act on it.', tease: 'Talk to us about mid-cycle learning reviews.' },
+  { num: '05', tag: 'Step 5', label: 'We make evidence that people will actually use', title: 'We make evidence that people will actually use', body: 'The best evidence in the world does nothing if it sits in a PDF nobody reads. We design reporting products from the start with their end-users in mind — whether that is a funder, a programme director, or the communities your work is meant to serve.', tease: 'Ask us about our approach to community-facing knowledge products.' }
 ];
 
 const stepsNav = document.getElementById('steps-nav');
@@ -645,7 +601,7 @@ const stepPanels = document.getElementById('step-panels');
 STEPS.forEach((s, i) => {
   const btn = document.createElement('div');
   btn.className = 'step-navitem' + (i === 0 ? ' active' : '');
-  btn.innerHTML = `<span class="sn-num">0${i+1}</span><span class="sn-label">${s.label}</span>`;
+  btn.innerHTML = `<span class="sn-num">${s.num}</span><span class="sn-label">${s.label}</span>`;
   btn.onclick = () => {
     document.querySelectorAll('.step-navitem').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.step-content').forEach(p => p.classList.remove('active'));
@@ -658,14 +614,14 @@ STEPS.forEach((s, i) => {
   panel.className = 'step-content' + (i === 0 ? ' active' : '');
   panel.id = 'sp-' + i;
   panel.innerHTML = `
-    <div class="sc-icon">${s.icon}</div>
+    <div class="sc-icon">${s.num}</div>
     <div class="sc-tag">${s.tag}</div>
     <div class="sc-title">${s.title}</div>
     <div class="sc-body">${s.body}</div>
     <div style="margin-top:20px;padding:16px 18px;background:#fcfbf7;border-radius:4px;border-left:3px solid var(--gold);">
-      <div style="font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Want to know more?</div>
-      <div style="font-size:13px;color:var(--muted);line-height:1.7;">${s.deliverables[0]}</div>
-      <a href="mailto:info@bantu-edge.com" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:12px;font-weight:500;color:var(--g);text-decoration:none;">Get in touch →</a>
+      <div style="font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Want to know more?</div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.75;">${s.tease}</div>
+      <a href="https://www.bantu-edge.com/contact-us" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:500;color:var(--g);text-decoration:none;">Get in touch →</a>
     </div>`;
   stepPanels.appendChild(panel);
 });
@@ -719,7 +675,7 @@ function showBelief(i) {
       <div class="bd-tag">${b.tag}</div>
       <div class="bd-title">${b.label}</div>
       <div class="bd-text">${b.impl}</div>
-      <div class="bd-challenge"><strong style="display:block;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--g)">The challenge</strong>${b.challenge}</div>
+      <div class="bd-challenge"><strong style="display:block;margin-bottom:4px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--g);">The challenge</strong>${b.challenge}</div>
     </div>
     <div class="bd-tension">
       <div class="bd-tag">${b.tension.title}</div>
@@ -742,12 +698,7 @@ showBelief(0);
 
 /* ── SCROLL REVEAL ── */
 const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-
-      e.target.classList.add('visible');
-    }
-  });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach((el, i) => {
